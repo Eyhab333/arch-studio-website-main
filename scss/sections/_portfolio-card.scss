@@ -1,0 +1,35 @@
+.portfolio__card {
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    .overlay {
+      background: rgba(255, 255, 255, 0.503415);
+    }
+  }
+  @include size(tablet) {
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.0001) 0.01%,
+      rgba(0, 0, 0, 0.499044) 100%
+    );
+    padding: 23px 24px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    &__date {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      opacity: 0.75;
+    }
+  }
+}

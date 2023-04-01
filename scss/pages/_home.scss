@@ -1,0 +1,253 @@
+.featured {
+  margin-top: 7.3rem;
+  @include size(tablet) {
+    margin-top: 20rem;
+  }
+
+  &__header {
+    a {
+      display: none;
+    }
+    @include size(tablet) {
+      a {
+        display: flex;
+      }
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &__button {
+    width: 31.1rem;
+    justify-content: space-between;
+    @include size(tablet) {
+      display: none;
+    }
+  }
+  &__card_label {
+    display: none;
+    position: absolute;
+    top: 2.9rem;
+    right: 1.6rem;
+    font-weight: 700;
+    font-size: 25rem;
+    line-height: 20rem;
+    color: white;
+    opacity: 0.5;
+
+    @include size(tablet) {
+      display: block;
+    }
+    @include size(desktop) {
+      top: 4.5rem;
+      right: -1.6rem;
+    }
+  }
+}
+
+.ideas {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  @include size(tablet) {
+    margin: 0 auto;
+    display: flex;
+    width: 57.3rem;
+  }
+  @include size(desktop) {
+    width: 111rem;
+  }
+  &__text {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 3.2rem;
+    @include size(tablet) {
+      padding-left: 5.8rem;
+    }
+    @include size(desktop) {
+      padding-left: 16.8rem;
+    }
+  }
+  &__title {
+    margin-bottom: 2.3rem;
+  }
+}
+
+.welcome {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 11.3rem;
+  margin-top: 10rem;
+  @include size(tablet) {
+    margin-bottom: 23.3rem;
+  }
+  @include size(desktop) {
+    margin-bottom: 20rem;
+  }
+
+  &__welcome {
+    display: none;
+    color: $color-very-light-grey;
+    position: absolute;
+    top: -15rem;
+    left: 0;
+    @include size(tablet) {
+      display: block;
+    }
+    @include size(desktop) {
+      top: -7.5rem;
+      left: -3.5rem;
+    }
+  }
+  &__image {
+    display: none;
+    @include size(desktop) {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $color-dark-grey;
+    margin-bottom: 2.4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &_container {
+      z-index: 2;
+      @include size(desktop) {
+        max-width: 48.3rem;
+        margin-right: 12.5rem;
+      }
+    }
+  }
+  &__header {
+    margin-bottom: 2.2rem;
+    @include size(tablet) {
+      margin-bottom: 4.3rem;
+    }
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  @include size(tablet) {
+    width: 57.3rem;
+    margin-bottom: 18.9rem;
+  }
+  @include size(desktop) {
+    width: 111rem;
+  }
+  &__item {
+    font-weight: bold;
+    font-size: 2em;
+    display: none;
+    &--selected {
+      display: block;
+    }
+  }
+  &__image img {
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.35;
+  }
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 0 3.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    h2 {
+      margin-bottom: 1.1rem;
+    }
+    @include size(tablet) {
+      padding: 0 5.8rem;
+    }
+    @include size(desktop) {
+      padding: 0 47rem 0 19rem;
+    }
+  }
+  &__info {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  .button {
+    margin-top: 8.3rem;
+    @include size(tablet) {
+      margin-top: 4.1rem;
+    }
+  }
+  &__navigation {
+    position: absolute;
+    bottom: 0;
+    left: -8rem;
+    display: none;
+    @include size(tablet) {
+      display: flex;
+    }
+    &-item {
+      width: 8rem;
+      height: 8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      color: $color-medium-grey;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      &:hover {
+        cursor: pointer;
+      }
+      &--selected {
+        background: $color-very-dark-blue;
+        color: white;
+      }
+    }
+  }
+}

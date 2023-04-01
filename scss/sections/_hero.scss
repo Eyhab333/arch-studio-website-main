@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+  @include size(tablet) {
+    margin: 0 auto;
+    padding: 0;
+    width: 57.3rem;
+    margin-bottom: 20rem;
+  }
+  @include size(desktop) {
+    width: 111rem;
+  }
+
+  &__img {
+    position: relative;
+    z-index: -1;
+    img {
+      width: 100%;
+      @include size(desktop) {
+        width: auto;
+      }
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000000;
+      opacity: 0.35;
+      @include size(desktop) {
+        width: 63.5rem;
+      }
+    }
+  }
+  &__content {
+    margin-top: -4.5rem;
+    margin-right: 3.2rem;
+    padding: 6.5rem 0 7.6rem 3.2rem;
+    background-color: white;
+    z-index: 2;
+    @include size(tablet) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      margin-left: 5.8rem;
+      padding-left: 6rem;
+      padding-top: 8.8rem;
+    }
+    @include size(desktop) {
+      max-width: 62.8rem;
+      margin: 0;
+      padding-left: 18.2rem;
+      padding-top: 21.7em;
+    }
+  }
+  &__header {
+    color: $color-very-light-grey;
+    position: absolute;
+    right: 0;
+    top: -8.8rem;
+  }
+  &__title {
+    margin-bottom: 2.1rem;
+    @include size(tablet) {
+      margin-bottom: 3.8rem;
+
+      @include heading__line(0, 7.3rem, 5.7rem);
+    }
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $color-dark-grey;
+  }
+}

@@ -1,0 +1,15 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  padding: 2.5rem 3.2rem 2.2rem 3.7rem;
+  background-color: $color-very-dark-blue;
+  text-decoration: none;
+  p {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: white;
+    border: 0;
+    margin-right: 2.4rem;
+  }
+}

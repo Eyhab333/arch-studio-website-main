@@ -1,0 +1,91 @@
+.footer {
+  width: 100%;
+  display: flex;
+
+  @include size(tablet) {
+    width: 76.8rem;
+    margin-inline: auto;
+  }
+  @include size(desktop) {
+    width: 111rem;
+  }
+
+  &__container {
+    background-color: $color-very-light-grey;
+    padding: 9.3rem 6.1rem 4.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    @include size(tablet) {
+      flex-direction: row;
+      padding: 0;
+      width: 61.2rem;
+      margin: 0;
+    }
+    @include size(desktop) {
+      width: 98.4rem;
+    }
+  }
+
+  &__logo {
+    background-color: $color-very-dark-blue;
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -6rem;
+
+    @include size(tablet) {
+      position: static;
+      margin-right: 4rem;
+    }
+    @include size(desktop) {
+      width: 20rem;
+      height: 20rem;
+      margin-right: 8.5rem;
+    }
+
+    svg {
+      height: auto;
+      width: 58px;
+      @include size(desktop) {
+        width: 9.6rem;
+      }
+    }
+  }
+  &__link {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: $color-medium-grey;
+    text-decoration: none;
+    margin-bottom: 3.2rem;
+
+    @include size(tablet) {
+      margin: 0;
+      &:nth-of-type(1) {
+        margin-right: 6.1rem;
+      }
+      &:nth-of-type(2) {
+        margin-right: 5.1rem;
+      }
+    }
+
+    &:hover {
+      color: $color-very-dark-blue;
+    }
+  }
+
+  .button {
+    @include size(tablet) {
+      position: absolute;
+      right: -12.6rem;
+    }
+  }
+}

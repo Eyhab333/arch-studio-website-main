@@ -1,0 +1,37 @@
+@mixin size($size) {
+  @if $size == tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin heading__line($top, $top-tablet, $top-desktop) {
+  position: relative;
+  margin-top: $top;
+  @include size(tablet) {
+    margin-top: $top-tablet;
+  }
+  @include size(desktop) {
+    margin-top: 0;
+  }
+  &:before {
+    content: "";
+    height: 1px;
+    width: 6.5rem;
+    position: absolute;
+    top: -$top;
+    left: 0;
+    background-color: $color-light-grey;
+    @include size(tablet) {
+      top: -$top-tablet;
+    }
+    @include size(desktop) {
+      top: -$top-desktop;
+    }
+  }
+}

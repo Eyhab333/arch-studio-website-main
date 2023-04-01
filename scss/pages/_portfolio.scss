@@ -1,0 +1,19 @@
+.portfolio {
+  padding: 0 3.2rem;
+  align-items: center;
+  margin-bottom: 7.2rem;
+  margin-top: 5.6rem;
+  gap: 2.4rem;
+
+  @include size(tablet) {
+    margin-bottom: 160px;
+    padding: 0;
+  }
+
+  @include size(desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 3.2rem;
+    column-gap: 3rem;
+  }
+}

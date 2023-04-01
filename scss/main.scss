@@ -1,0 +1,17 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./global.scss";
+@import "./typography.scss";
+@import "./utils.scss";
+
+@import "./components/button.scss";
+
+@import "./sections/footer.scss";
+@import "./sections/_portfolio-card.scss";
+@import "./sections/_header.scss";
+@import "./sections/_hero.scss";
+
+@import "./pages/_portfolio.scss";
+@import "./pages/_about.scss";
+@import "./pages/_contact.scss";
+@import "./pages/_home.scss";

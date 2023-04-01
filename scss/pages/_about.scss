@@ -1,0 +1,111 @@
+.about {
+  &__leaders {
+    display: flex;
+    margin-bottom: 11.1rem;
+    @include size(tablet) {
+      margin-bottom: 23.9rem;
+    }
+    @include size(desktop) {
+      flex-direction: row;
+      margin-bottom: 15.9rem;
+    }
+    &_title {
+      max-width: 23rem;
+      margin-bottom: 5.6rem;
+    }
+  }
+
+  .leaders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7.9rem;
+    max-width: 73rem;
+
+    @include size(tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 10.3rem;
+      column-gap: 1.1rem;
+    }
+    @include size(desktop) {
+      margin-left: auto;
+      row-gap: 6.3rem;
+      column-gap: 3rem;
+    }
+
+    &__card {
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &__image {
+      width: 31.1rem;
+      margin-bottom: 1.5rem;
+      @include size(tablet) {
+        width: 28rem;
+      }
+      @include size(desktop) {
+        width: 35rem;
+      }
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      opacity: 0.75;
+    }
+  }
+
+  &__heritage {
+    margin-bottom: 11.2rem;
+
+    @include size(tablet) {
+      margin-bottom: 20.7rem;
+    }
+    @include size(desktop) {
+      margin-bottom: 20.1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+    p {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: $color-dark-grey;
+    }
+    br {
+      display: block;
+      content: "";
+      margin-top: 2.4rem;
+    }
+  }
+
+  .heritage {
+    @include size(desktop) {
+      margin-bottom: 1rem;
+    }
+    &__header {
+      margin-bottom: 2.2rem;
+      max-width: 23rem;
+      @include heading__line(6.8rem, 4.9rem, 8.1rem);
+      @include size(tablet) {
+        margin-bottom: 6.2rem;
+      }
+      @include size(desktop) {
+        margin-bottom: 6.1rem;
+      }
+    }
+    &__image {
+      width: 540px;
+      height: 568px;
+      width: auto;
+      margin-left: 12.4rem;
+      display: none;
+      @include size(desktop) {
+        display: block;
+      }
+    }
+  }
+}

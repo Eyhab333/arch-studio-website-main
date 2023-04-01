@@ -1,0 +1,172 @@
+.header {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+
+  &__logo {
+    @include size(tablet) {
+      margin-right: 7.9rem;
+    }
+    @include size(desktop) {
+      margin-right: 9.5rem;
+    }
+    svg {
+      width: 7.7rem;
+      height: auto;
+
+      @include size(tablet) {
+        width: 9.6rem;
+      }
+    }
+    path {
+      fill: $color-very-dark-blue;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    position: relative;
+    align-items: center;
+    z-index: 30;
+    padding: 3.2rem;
+    @include size(tablet) {
+      padding: 5.6rem 0;
+    }
+  }
+
+  &__route {
+    display: none;
+
+    @include size(tablet) {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 1.8rem;
+      letter-spacing: 1.8rem;
+      color: $color-light-grey;
+      position: absolute;
+      top: 0;
+      transform-origin: left bottom;
+      transform: translateY(-100%) translateX(-5.1rem) rotate(90deg);
+    }
+
+    @include size(desktop) {
+      transform: translateY(-100%) translateX(-9.4rem) rotate(90deg);
+    }
+    &--line {
+      height: 1px;
+      width: 10.4rem;
+      display: block;
+      background-color: $color-light-grey;
+      margin-right: 4.8rem;
+    }
+  }
+  &__toggle {
+    margin-left: auto;
+    &:hover {
+      cursor: pointer;
+    }
+    > span {
+      display: block;
+      width: 24px;
+      height: 4px;
+      background-color: $color-very-dark-blue;
+      transition: all 300ms ease-in-out;
+      transform-origin: 1px 2px;
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &.open {
+    @media screen and(max-width:$tablet) {
+      .header__toggle {
+        > span:first-child {
+          transform: rotate(45deg);
+        }
+
+        > span:nth-child(2) {
+          opacity: 0;
+        }
+
+        > span:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+      .header__menu {
+        display: block;
+        margin-left: 3.2rem;
+      }
+    }
+  }
+  &__links {
+    & a {
+      margin-right: 6.1rem;
+      text-decoration: none;
+      @include size(tablet) {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        color: $color-medium-grey;
+      }
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    width: calc(100% - 3.2rem);
+    top: 9.8rem;
+    background-color: $color-very-light-grey;
+    padding: 3.9rem 4.8rem 4.2rem 4.8rem;
+    z-index: 100;
+    display: none;
+    a {
+      display: block;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 4rem;
+      margin-bottom: 1.7rem;
+      color: $color-very-dark-blue;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.open .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.5;
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    @include size(tablet) {
+      position: relative;
+    }
+  }
+
+  .hide-for-mobile {
+    display: none;
+    @include size(tablet) {
+      display: block;
+    }
+  }
+
+  .hide-for-tablet {
+    @include size(tablet) {
+      display: none;
+    }
+  }
+}

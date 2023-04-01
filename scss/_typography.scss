@@ -1,0 +1,57 @@
+body {
+  font-family: $font-family;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-style: normal;
+  font-weight: 700;
+}
+
+h1 {
+  display: none;
+  @include size(tablet) {
+    display: block;
+    font-weight: 700;
+    font-size: 15.35rem;
+    line-height: 20rem;
+    letter-spacing: -0.3rem;
+  }
+  @include size(desktop) {
+    font-size: 25rem;
+    line-height: 20rem;
+    letter-spacing: -0.5rem;
+  }
+}
+
+h2 {
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+  letter-spacing: -0.12rem;
+  font-weight: 700;
+  @include size(tablet) {
+    font-size: 9.6rem;
+    line-height: 8rem;
+    letter-spacing: -0.2rem;
+  }
+}
+
+h3 {
+  font-size: 4.8rem;
+  line-height: 5.2rem;
+  letter-spacing: -0.171429rem;
+
+  @include size(tablet) {
+    font-weight: 700;
+    font-size: 7.2rem;
+    line-height: 6.4rem;
+    letter-spacing: -0.2rem;
+  }
+}
+
+h4 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+}

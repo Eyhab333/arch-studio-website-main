@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+img {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 9.8rem;
+  @include size(tablet) {
+    margin-top: 0;
+  }
+}
